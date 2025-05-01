@@ -7,22 +7,65 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cyberlabs.achraf",
+      "buildNumber": "1",
+      "infoPlist": {
+        "LSMinimumSystemVersion": "13.0",
+        "UIBackgroundModes": [
+          "fetch",
+          "remote-notification"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#055849"
+      },
+      "package": "com.cyberlabs.achraf",
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/JosefinSans-Bold.ttf",
+            "./assets/fonts/JosefinSans-Regular.ttf",
+            "./assets/fonts/JosefinSans-SemiBold.ttf",
+            "./assets/fonts/JosefinSans-Light.ttf",
+            "./assets/fonts/JosefinSans-ExtraLight.ttf",
+            "./assets/fonts/JosefinSans-Medium.ttf",
+            "./assets/fonts/JosefinSans-Thin.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#055849",
+          "image": "./assets/adaptive-icon.png",
+          "imageWidth": 200
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "5f3d1f04-0a69-49ec-9c7f-39230ef45dcf"
+      }
     }
   }
 }
